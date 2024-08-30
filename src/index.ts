@@ -1,6 +1,17 @@
+import "reflect-metadata";
 import app from "./app";
 import dataSource from "./db";
+import { User } from "./db/entities/User";
 import { env } from "./env";
+
+// Declare global variables
+declare global {
+  namespace Express {
+    interface Request {
+      user: User;
+    }
+  }
+}
 
 // Function to start the app
 async function startApp() {

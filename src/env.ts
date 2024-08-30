@@ -8,6 +8,10 @@ const envSchema = z.object({
 
   // Database Config
   DATABASE_URL: z.string(),
+
+  // JWT Secrets
+  ACCESS_TOKEN_SECRET: z.string(),
+  REFRESH_TOKEN_SECRET: z.string(),
 });
 
 // Ensure the parsed environment variables
