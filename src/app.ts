@@ -1,9 +1,13 @@
+import cors from "cors";
 import express from "express";
 import authRouter from "./routes/auth.routes";
 import taskRouter from "./routes/task.routes";
 
 // Create a new express application instance
 const app = express();
+
+// Allow CORS
+app.use(cors());
 
 // JSON parser
 app.use(express.json());
