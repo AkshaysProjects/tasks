@@ -22,7 +22,7 @@ export default function Guard({ children }: { children: React.ReactNode }) {
     const refresh_token = localStorage.getItem("refresh_token");
     if (!refresh_token) router.push("/login");
     refreshToken();
-  }, []);
+  }, [router]);
   if (!loaded) return <Spinner />;
   return <>{children}</>;
 }
