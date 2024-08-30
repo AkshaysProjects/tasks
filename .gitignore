@@ -1,0 +1,8 @@
+# TypeScript Build Artifacts
+dist/
+
+# Node Modules
+node_modules/
+
+# Environment Variables
+.env
